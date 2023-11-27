@@ -10,7 +10,7 @@ int rear = -1;
 
 
 bool isEmpty() {
-    return front == rear;
+    return front == -1;
 }
 
 bool isFull() {
