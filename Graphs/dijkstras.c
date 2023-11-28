@@ -30,7 +30,7 @@ void dijkstras(int n, int adj[n][n], int src) {
 
         // Update the distances of adjacent vertices
         for (int j = 0; j < n; j++) {
-            if (!visited[j] && !adj[minIndex][j] && dist[minIndex] != INT_MAX && dist[minIndex] + adj[minIndex][j] < dist[j]) {
+            if (adj[minIndex][j] != 0 && dist[minIndex] + adj[minIndex][j] < dist[j]) {
                 dist[j] = dist[minIndex] + adj[minIndex][j];
             }
         }
